@@ -1,7 +1,7 @@
 import numpy as np
 
 sentences = set()
-with open(r'C:\Users\Abdo\OneDrive\Desktop\NLP\Assignments\Assignment1\datasetSentences.txt', 'r', encoding='utf-8') as file:
+with open('./TextClassificationNLP/Assignment1/datasetSentences.txt', 'r', encoding='utf-8') as file:
     next(file) 
     for line in file:
         parts = line.split('\t')
@@ -11,7 +11,7 @@ with open(r'C:\Users\Abdo\OneDrive\Desktop\NLP\Assignments\Assignment1\datasetSe
 uniqueSentences = list(sentences)
 
 allLabels = []
-with open(r"C:\Users\Abdo\OneDrive\Desktop\NLP\Assignments\Assignment1\sentiment_labels.txt", 'r') as file:
+with open('./TextClassificationNLP/Assignment1/sentiment_labels.txt', 'r') as file:
     next(file) 
     for line in file:
         allLabels.append(float(line.split('|')[1]))
